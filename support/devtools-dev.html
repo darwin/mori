@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>mori devtools test (dev config)</title>
+  <script type="text/javascript" src="../dev-devtools/goog/base.js"></script>
+  <script src="../dev-devtools/mori.dev.js"></script>
+  <script type="text/javascript">goog.require("mori");</script>
+  <script type="text/javascript">goog.require("mori.devtools");</script>
+  <script>
+      if (mori) {
+        console.log("mori.dev.js loaded using a script tag!");
+        mori.installDevtools();
+
+        var x = mori.vector(1,2,3);
+        var y = mori.conj(x,4);
+
+        console.log(x); // => [1, 2, 3]
+        console.log(y); // => [1, 2, 3, 4]
+      }
+    </script>
+</head>
+<body>
+<h1>mori devtools test (dev config)</h1>
+<p>Check the browser console for errors and output.</p>
+</body>
+</html>

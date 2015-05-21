@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>mori devtools test (release)</title>
+  <script src="../release-devtools/build/mori.base.js"></script>
+  <script src="../release-devtools/build/mori.mutable.js"></script>
+  <script src="../release-devtools/build/mori.extra.js"></script>
+  <script src="../release-devtools/build/mori.devtools.js"></script>
+  <script>
+      if (mori) {
+        console.log("mori.devtools.js loaded using a script tag!");
+        mori.installDevtools();
+
+        var x = mori.vector(1,2,3);
+        var y = mori.conj(x,4);
+
+        console.log(x); // => [1, 2, 3]
+        console.log(y); // => [1, 2, 3, 4]
+      }
+    </script>
+</head>
+<body>
+<h1>mori devtools test (release)</h1>
+<p>Check the browser console for errors and output.</p>
+</body>
+</html>
